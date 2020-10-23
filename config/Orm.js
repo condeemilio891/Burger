@@ -1,4 +1,4 @@
-let connection=require("../config/connection");
+let connection=require("./connection.js");
 
 //object relational mapper 
 function objToSql(ob) {

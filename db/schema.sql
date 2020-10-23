@@ -5,7 +5,7 @@ USE BURGER_DB;
 
 CREATE TABLE burgers( 
 id int NOT NULL AUTO_INCREMENT,
-burger_name VARCHAR(30),
+burger_name VARCHAR(30) NOT NULL,
 devoured BIT,
 PRIMARY KEY (id)
 ); 

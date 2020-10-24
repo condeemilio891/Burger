@@ -1,5 +1,16 @@
 let connection=require("./connection.js");
 
+
+
+// Pringt QUESTION MARK
+
+function printQuestionMarks(num) {
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+      arr.push("?");
+    }
+    return arr.toString();
+  }
 //object relational mapper 
 function objToSql(ob) {
     var arr = [];
@@ -33,7 +44,7 @@ var orm={
         
     },
     insertOne: function(table,cols,vals,cb){
-        var queryString="INSERT INTO"+table;
+        var queryString="INSERT INTO "+table;
 
         queryString+="(";
         queryString+=cols.toString();

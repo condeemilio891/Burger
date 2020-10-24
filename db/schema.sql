@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS BURGER_DB;
+
 CREATE DATABASE BURGER_DB;
 
 USE BURGER_DB;
@@ -6,8 +6,7 @@ USE BURGER_DB;
 CREATE TABLE burgers( 
 id int NOT NULL AUTO_INCREMENT,
 burger_name VARCHAR(30) NOT NULL,
-devoured BIT,
+devoured boolean NOT NULL,
 PRIMARY KEY (id)
 ); 
 
-SELECT * FROM burgers

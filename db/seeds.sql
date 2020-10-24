@@ -1,6 +1,10 @@
+INSERT INTO burgers (burger_name)
+VALUES("Magic_shroom");
+
+
 INSERT INTO burgers(burger_name,devoured)
-VALUES("Magic_shroom",0);
+VALUES("Buffalo_Bill", true);
+
+
 INSERT INTO burgers(burger_name,devoured)
-VALUES("Buffalo_Bill",0);
-INSERT INTO burgers(burger_name,devoured)
-VALUES("Classic_Burger",0);
+VALUES("Classic_Burger");

@@ -6,7 +6,8 @@ USE BURGER_DB;
 CREATE TABLE burgers( 
 id int NOT NULL AUTO_INCREMENT,
 burger_name VARCHAR(30) NOT NULL,
-devoured boolean NOT NULL,
+devoured boolean DEFAULT FALSE,
 PRIMARY KEY (id)
 ); 
 
+SELECT * FROM burgers

@@ -35,7 +35,7 @@ function objToSql(ob) {
 //ASK BAILEY IF THE PARAMETERS SHOULD REMAIN THE SAME
 var orm={
     selectAll: function(tableInput,cb){
-        var queryString="SELECT * FROM "+tableInput+";"
+        var queryString="SELECT * FROM "+tableInput+";";
         connection.query(queryString, function(err,result){
             if (err) {throw err;}
             console.log(result);
@@ -46,12 +46,12 @@ var orm={
     insertOne: function(table,cols,vals,cb){
         var queryString="INSERT INTO "+table;
 
-        queryString+="(";
+        queryString+=" (";
         queryString+=cols.toString();
-        queryString+=')'
+        queryString+=') '
         queryString+="VALUES ("
         queryString+= printQuestionMarks(vals.length);
-        queryString+= ")";
+        queryString+= ") ";
         
         console.log(queryString);
         
@@ -64,10 +64,10 @@ var orm={
     },
     updateOne: function(table,objColVals,condition,cb){ 
         //this seems qrong 
-        let queryString="UPDATE"+table;
-        queryString+="SET";
+        let queryString="UPDATE "+table;
+        queryString+=" SET ";
         queryString+=objToSql(objColVals);
-        queryString+="WHERE";
+        queryString+=" WHERE ";
         queryString+=condition;
         console.log(queryString)
 

@@ -30,7 +30,7 @@ function objToSql(ob) {
       }
     }
 
-    return arr.tostring();}
+    return arr.toString();}
   
 //ASK BAILEY IF THE PARAMETERS SHOULD REMAIN THE SAME
 var orm={

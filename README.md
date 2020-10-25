@@ -1,3 +1,3 @@
 # Burger
 
-<img src="/public/assets/Burger.APP.png" alt="">
+<img src="/public/assets/BurgerAPP.jpg" alt="">

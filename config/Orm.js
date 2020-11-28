@@ -24,16 +24,15 @@ function objToSql(ob) {
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
         arr.push(key + "=" + value);
       }
     }
 
     return arr.toString();}
   
-//ASK BAILEY IF THE PARAMETERS SHOULD REMAIN THE SAME
+
 var orm={
+  //selecct all from database
     selectAll: function(tableInput,cb){
         var queryString="SELECT * FROM "+tableInput+";";
         connection.query(queryString, function(err,result){
@@ -43,9 +42,9 @@ var orm={
         })
         
     },
+    //create
     insertOne: function(table,cols,vals,cb){
         var queryString="INSERT INTO "+table;
-
         queryString+=" (";
         queryString+=cols.toString();
         queryString+=') '
